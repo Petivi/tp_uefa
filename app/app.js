@@ -13,7 +13,7 @@ var connection = mongoose.connect(
 
 
 
-const adr = "https://fr.uefa.com/uefachampionsleague/season=2019/clubs/club=50139/";
+const adr = "https://fr.uefa.com/uefachampionsleague/season=2019/clubs/club=1652/";
 var q = url.parse(adr, true);
 
 function getFile(){
@@ -68,10 +68,10 @@ function parseFile(path){
     var playersTag = $('li.squad--team-player');
 
     $(playersTag).each(function(){
-      var playerName = $(this).find('span.squad--player-name-name').text();
-      var playerSurname = $(this).find('span.squad--player-name-surname').text();
-      var playerNumber = $(this).find('span.squad--player-num').text();
-      var playerRole = $(this).find('span.squad--player-role').text();
+      var playerName = $(this).find('span.squad--player-name-name').text().trim();
+      var playerSurname = $(this).find('span.squad--player-name-surname').text().trim();
+      var playerNumber = $(this).find('span.squad--player-num').text().trim();
+      var playerRole = $(this).find('span.squad--player-role').text().trim();
       var playerInfo = {'name': playerName, 'surname': playerSurname, 'number': playerNumber, 'role': playerRole};
       playersList.push(playerInfo);
     });

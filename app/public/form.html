@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Search Form</title>
+  </head>
+  <body>
+    <h1>Search Form</h1>
+    <p>Les recherches ne sont pas "case sensitive"</p>
+    <p>Le script vérifie que la valeur envoyée dans le champ est <strong>contenue</strong> dans la valeur en base</p>
+    <form class="" action="/team" method="POST">
+      <div class="">
+        <label for="">Pays :</label>
+        <input type="text" name="pays" value="" placeholder="ex : ITA">
+      </div>
+      <div class="">
+        <label for="">Club :</label>
+        <input type="text" name="club" value="" placeholder="ex : Juventus">
+      </div>
+      <div class="">
+        <label for="">Joueur :</label>
+        <input type="text" name="player" value=""placeholder="ex : Massimiliano">
+      </div>
+      <div class="">
+        <label for="">Poste :</label>
+        <select class="" name="poste">
+          <option selected value="all">Tous</option>
+          <option value="Gardien">Gardien</option>
+          <option value="Milieu">Milieu</option>
+          <option value="Défenseur">Défenseur</option>
+          <option value="Attaquant">Attaquant</option>
+          <option value="Entraîneur">Entraîneur</option>
+        </select>
+      </div>
+      <button type="submit">Envoi</button>
+    </form>
+  </body>
+</html>
